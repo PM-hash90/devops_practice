@@ -1,0 +1,7 @@
+﻿# Ignore all log files
+*.log
+logs/
+
+# Ignore specific folders
+Configurations/
+Data_Exports/
