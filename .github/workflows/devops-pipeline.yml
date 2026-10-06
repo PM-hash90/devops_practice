@@ -1,0 +1,21 @@
+name: DevOps Automated Health Check Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Step 1 - Pull code from GitHub
+      uses: actions/checkout@v3
+
+    - name: 🐍 Step 2 - Set up Python environment
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: 🚀 Step 3 - Run our Server Health Script
+      run: python myscript.py
